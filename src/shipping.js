@@ -7,3 +7,8 @@ export const FLAT_SHIPPING = 5.99;
 export function shippingFor(subtotal) {
   return subtotal >= FREE_SHIPPING_FROM ? 0 : FLAT_SHIPPING;
 }
+
+/** True when a cart qualifies for free shipping. */
+export function shipsFree(subtotal) {
+  return shippingFor(subtotal) === 0;
+}

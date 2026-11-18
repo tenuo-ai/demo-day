@@ -24,10 +24,12 @@ jobs:
           ref: ${{ github.event.repository.default_branch }}
           sparse-checkout: .github
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
-      - run: pip install --disable-pip-version-check tenuo==0.3.7
-      - run: python -I .github/tenuo/run_check.py
+          node-version: "20"
+      - run: npm install --no-audit --no-fund
+        working-directory: .github/tenuo
+      - run: node run_check.mjs
+        working-directory: .github/tenuo
         env:
           GITHUB_TOKEN: ${{ github.token }}

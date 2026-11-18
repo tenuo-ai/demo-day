@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
-      - run: pip install --disable-pip-version-check tenuo==0.3.7 pytest
-      - run: python -I -m pytest -q .github/tenuo/test_gate.py
+          node-version: "20"
+      - run: npm install --no-audit --no-fund && npm test
+        working-directory: .github/tenuo

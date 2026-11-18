@@ -1,0 +1,11 @@
+{
+  "name": "tenuo-agent-review-gate",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@tenuo/core": "file:../../../../../../../private/tmp/claude-501/-Users-dj-Tenuo/1c24c7a9-6d6b-497c-bc08-c17826a93089/scratchpad/tenuo-core-0.3.7-beta.0.tgz"
+  }
+}

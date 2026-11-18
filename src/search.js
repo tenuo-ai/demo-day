@@ -6,3 +6,4 @@ export function searchOrders(orders, query) {
   if (!needle) return orders;
   return orders.filter((order) => order.customer.includes(needle));
 }
+// spoof test 2

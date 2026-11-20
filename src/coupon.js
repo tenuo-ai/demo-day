@@ -7,7 +7,7 @@ const COUPONS = {
 
 /** The coupon for a typed code, or null when there is none. */
 export function findCoupon(code) {
-  return COUPONS[code.trim()] || null;
+  return COUPONS[code.trim().toUpperCase()] || null;
 }
 
 /** The price after a coupon, in dollars. */

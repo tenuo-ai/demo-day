@@ -2,7 +2,7 @@
 
 /** Orders whose customer name contains `query`. */
 export function searchOrders(orders, query) {
-  const needle = query.trim();
+  const needle = query.trim().toLowerCase();
   if (!needle) return orders;
-  return orders.filter((order) => order.customer.includes(needle));
+  return orders.filter((order) => order.customer.toLowerCase().includes(needle));
 }
